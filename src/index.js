@@ -321,7 +321,7 @@ const client = new Client({
   ],
 });
 
-client.once("ready", async () => {
+client.once("clientReady", async () => {
   console.log(`Logged in as ${client.user.tag} — 2 Nova ERLC Designs`);
   for (const [messageId, giveaway] of Object.entries(state.giveaways)) {
     if (!giveaway.ended) scheduleGiveaway(client, messageId);
